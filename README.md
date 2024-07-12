@@ -1,10 +1,6 @@
 # Personal Portfolio ⚡️
 > Welcome to my portfolio!
-
-> https://github.com/Godgunxu
-
-### Website Preview
-To view a live example, **[click here](https://godgunxu.github.io)**
+To view online, **[click here](https://godgunxu.github.io)**
 
 :star: Star me on GitHub — it helps!
 
