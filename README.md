@@ -1,17 +1,10 @@
-```markdown
 # Personal Portfolio ⚡️
 > Welcome to my portfolio!
 
 > https://github.com/Godgunxu
 
 ### Website Preview
-<p align="center"> 
-  <kbd>
-    <a href="https://github.com/Godgunxu">
-      <img src="https://github.com/Godgunxu.github.io/assets/img/preview.jpg" alt="Portfolio Preview">
-    </a>
-  </kbd>
-</p>
+To view a live example, **[click here](https://godgunxu.github.io)**
 
 :star: Star me on GitHub — it helps!
 
@@ -29,8 +22,6 @@
 ✔️ Education\
 ✔️ Contact Info\
 ✔️ Resume
-
-To view a live example, **[click here](https://godgunxu.github.io)**
 
 ## Tools Used 🛠️
 * [**GitHub Pages**](https://create-react-app.dev/docs/deployment/#github-pages) - To host my static website (HTML, CSS, JS).
