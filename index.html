@@ -210,7 +210,10 @@
           <div class="content section-padding valign" style="margin-left: 10%; margin-top: 50px;">
             <div class="caption">
               <h2>Hi, I'm <span class="teal">Jason  Xu.</span></h2>
-              <h5 style="color:#fff">A <span class="typing" style="font-weight: 300; color:#004d40"></span></h5>
+              <h5 style="color:#fff">
+                <span class="typing-prefix" style="color:#fff"></span>
+                <span class="typing" style="font-weight: 300; color:#90caf9"></span>
+              </h5>
               <!-- <h5 style="color:#00796b">A <span class="typing" style="font-weight: 300; color:#fff"></span></h5> -->
               <h5>A self-motivated and enthusiastic programmer with a keen curiosity, who thrives on tackling complex and challenging real-world problems.</h5>
             </div>
@@ -832,7 +835,7 @@
             data-position="top" data-tooltip="View Jason  on LinkedIn"
             class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
               class="fa fa-linkedin"></i><a aria-label="Jason  on LinkedIn" href="https://www.linkedin.com/in/zhijing-xu/"
-              class="hoverline" target="_blank">linkedin.com/in/zhijingxu</a></a>
+              class="hoverline" target="_blank">linkedin.com/in/jasonxu</a></a>
         </p>
       </div>
     </section>
@@ -842,17 +845,35 @@
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", function () {
-      var typed = new Typed('.typing', {
-        strings: ["AI Specialist", "Data Analyst", "Product Manager", "Software Developer"],
-        loop: true,
-        typeSpeed: 80,
-        backSpeed: 40,
-        showCursor: true,
-        cursorChar: '▋', // 更现代的光标样式
-        smartBackspace: true,
-        startDelay: 300,
-        backDelay: 1200
-      });
+      const roles = [
+        { prefix: "An", title: "AI Specialist" },
+        { prefix: "A", title: "Data Analyst" },
+        { prefix: "A", title: "Product Manager" },
+        { prefix: "A", title: "Software Developer" }
+      ];
+      let idx = 0;
+      function startTyped() {
+        document.querySelector('.typing-prefix').textContent = roles[idx].prefix + " ";
+        if (window.typedInstance) window.typedInstance.destroy();
+        window.typedInstance = new Typed('.typing', {
+          strings: [roles[idx].title],
+          typeSpeed: 80,
+          backSpeed: 40,
+          showCursor: true,
+          cursorChar: '▋',
+          smartBackspace: true,
+          startDelay: 300,
+          backDelay: 1200,
+          loop: false,
+          onComplete: function () {
+            setTimeout(() => {
+              idx = (idx + 1) % roles.length;
+              startTyped();
+            }, 1200);
+          }
+        });
+      }
+      startTyped();
     });
   </script>
 
